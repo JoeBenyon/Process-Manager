@@ -199,11 +199,5 @@ namespace ProcessManager
             return selected;
 
         }
-
-        private static string refineProcessName(string input)
-        {
-
-            return null;
-        }
     }
 }
