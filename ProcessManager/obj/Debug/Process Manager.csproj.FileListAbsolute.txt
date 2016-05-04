@@ -1,6 +1,0 @@
-C:\Users\1227425\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Process Manager.exe.config
-C:\Users\1227425\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Process Manager.exe
-C:\Users\1227425\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Process Manager.pdb
-C:\Users\1227425\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Process Manager.csprojResolveAssemblyReference.cache
-C:\Users\1227425\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Process Manager.exe
-C:\Users\1227425\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Process Manager.pdb
