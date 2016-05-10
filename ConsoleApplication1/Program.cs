@@ -42,8 +42,10 @@ namespace ProcessManager
             }
         }
 
+        //Array containing search results
         private static Process[] results;
 
+        //Start a new process
         private static void startProcess()
         {
             Console.WriteLine("Enter a process name/file: ");
@@ -71,6 +73,7 @@ namespace ProcessManager
 
         }
 
+        //End a process
         private static void killProcess()
         {
             Console.WriteLine("Enter a process name (LIST to list processes):");
@@ -115,6 +118,7 @@ namespace ProcessManager
             }
         }
 
+        //Check process info
         private static void checkProcess()
         {
             Console.WriteLine("Enter a process name (LIST to list processes):");
@@ -168,6 +172,7 @@ namespace ProcessManager
             }
         }
 
+        //List all the processes running
         private static void processList()
         {
             Array processes = Process.GetProcesses().ToArray<Process>();
@@ -179,6 +184,7 @@ namespace ProcessManager
             Console.WriteLine("");
         }
 
+        //List processes matching that name
         private static void processRequest(string processName)
         {
             results = Process.GetProcessesByName(processName);
@@ -191,6 +197,7 @@ namespace ProcessManager
             }
         }
 
+        //Select the specific process to interact with
         private static Process processSelect(string select)
         {
             int x = Int16.Parse(select);
