@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProcessManager
 {
@@ -12,7 +14,6 @@ namespace ProcessManager
         static bool isRunning = true;
         static void Main(string[] args)
         {
-
             while (isRunning)
             {
                 Console.WriteLine("What would you like to do?\n1. Start Process\n2. Kill Process\n3. Check Process");
