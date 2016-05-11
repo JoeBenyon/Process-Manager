@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProcessManager
 {
@@ -12,10 +14,9 @@ namespace ProcessManager
         static bool isRunning = true;
         static void Main(string[] args)
         {
-
             while (isRunning)
             {
-                Console.WriteLine("What would you like to do?\n1. Start Process\n2. Kill Process\n3. Check Process");
+                Console.WriteLine("What would you like to do?\n1. Start Process\n2. Kill Process\n3. Check Process\n4. Start Log");
                 var choice = Console.ReadKey().Key;
                 switch (choice)
                 {
@@ -30,6 +31,10 @@ namespace ProcessManager
                     case ConsoleKey.D3:
                         Console.Clear();
                         checkProcess();
+                        break;
+                    case ConsoleKey.D4:
+                        Console.Clear();
+                        startLog();
                         break;
                     case ConsoleKey.Escape:
                         isRunning = false;
@@ -172,12 +177,16 @@ namespace ProcessManager
             }
         }
 
+        //Array of processes
+        private static Process[] getProcesses()
+        {
+            return Process.GetProcesses().ToArray<Process>();
+        }
+
         //List all the processes running
         private static void processList()
-        {
-            Array processes = Process.GetProcesses().ToArray<Process>();
-
-            foreach (Process x in processes)
+        { 
+            foreach (Process x in getProcesses())
             {
                 Console.WriteLine(x.ProcessName);
             }
@@ -205,6 +214,18 @@ namespace ProcessManager
             Process selected = results[x];
             return selected;
 
+        }
+
+        static Boolean logging = false;
+        //Start logging
+        public static void startLog()
+        {
+            
+        }
+
+        private void myProcess_Exited(object sender, System.EventArgs e)
+        {
+            //Handle process closing?
         }
     }
 }
